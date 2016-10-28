@@ -1,0 +1,30 @@
+version: '2'
+services:
+  picturae-ckan:
+    container_name: picturae-ckan
+    image: picturae/ckan:2.5.2
+    depends_on:
+      - picturae-ckan-postgres
+      - picturae-ckan-solr
+    links:
+       - picturae-ckan-postgres
+       - picturae-ckan-solr
+    ports:
+       - "80:80"
+    environment:
+       DATABASE_URL: "postgresql://ckan:ckan@picturae-ckan-postgres:5432/ckan"
+       SOLR_URL: "http://picturae-ckan-solr:8983/solr/ckan"
+    volumes:
+      - $CKAN_DATA_VOLUME:/var/lib/ckan/default
+  picturae-ckan-postgres:
+    container_name: picturae-ckan-postgres
+    image: picturae/ckan-postgres:9.6
+    ports:
+      - "5432:5432"
+    volumes:
+      - $POSTGRES_DATA_VOLUME:/var/lib/postgresql/data
+  picturae-ckan-solr:
+    container_name: picturae-ckan-solr
+    image: picturae/ckan-solr:6.2.1
+    ports:
+      - "8983:8983"
