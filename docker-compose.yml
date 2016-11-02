@@ -1,8 +1,8 @@
 version: '2'
 services:
-  picturae-ckan:
-    container_name: picturae-ckan
-    image: picturae/ckan:2.5.2
+  picturae-ckan-dcat:
+    container_name: picturae-ckan-dcat
+    image: picturae/ckan-dcat:0.0.1
     depends_on:
       - picturae-ckan-postgres
       - picturae-ckan-solr
