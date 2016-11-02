@@ -59,4 +59,11 @@ See links below for more information about these extensions.
 * https://github.com/ckan/ckanext-harvest
 * https://github.com/ckan/ckanext-dcat
 
+<h4>Used docker images</h4>
+See Dockerfile in /docker-ckan-dcat and docker-compose.yml
+
+* https://github.com/picturae/docker-ckan, https://hub.docker.com/r/picturae/ckan/
+* https://github.com/picturae/docker-ckan-solr, https://hub.docker.com/r/picturae/ckan-solr
+* https://github.com/picturae/docker-ckan-postgres, https://hub.docker.com/r/picturae/ckan-postgres
+
 
