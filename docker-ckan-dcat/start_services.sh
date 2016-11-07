@@ -1,7 +1,7 @@
 #/bin/bash
 
 
-function check_psql {
+check_psql () {
         curl picturae-ckan-postgres:5432 2>/dev/null
         if [ $? -ne 52 ]
         then
