@@ -52,7 +52,7 @@ This CKAN instance is equiped with the harvester and dcat plugin. This adds dcat
 This enables other instances to harvest these datasets.
 
 The dcat plugin also enables this instance to harvest datasets form other ckan instances.
-See links below for more information about these extensions.
+See links below for more information about these extensions. (harvest of other dcat catalogs has not been tested)
 
 
 <h4>Used extensions</h4>
@@ -65,5 +65,19 @@ See Dockerfile in /docker-ckan-dcat and docker-compose.yml
 * https://github.com/picturae/docker-ckan, https://hub.docker.com/r/picturae/ckan/
 * https://github.com/picturae/docker-ckan-solr, https://hub.docker.com/r/picturae/ckan-solr
 * https://github.com/picturae/docker-ckan-postgres, https://hub.docker.com/r/picturae/ckan-postgres
+
+<hr>
+
+<h2>Notes on using CKAN</h2>
+
+* Users can register to add datasets.
+* In order to add a dataset an organisation has to be created.
+* A dataset contains at least 1 resource (which is the actual representation of the data, eg. an url to a webservice or an uploaded file to a csv file)
+* Each registered user has an API key (see API key in left column on you profile)
+* API Key together with API can be used to retrieve, add or update resources,datasets and organisations. See the documentation on [http://docs.ckan.org/en/latest/api/]
+* Of course the interface can also be used to create and upload datasets.
+
+
+
 
 
